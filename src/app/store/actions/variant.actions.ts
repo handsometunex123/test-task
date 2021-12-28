@@ -5,6 +5,7 @@ export enum EVariantActions {
   UpdateVariant = '[Variant] Update Variants',
   GetVariantSuccess = '[Variant] Get Variants Success',
   GetSpecialVariant = '[Variant] Get Special Variants',
+  GetVariant = '[Variant] Get Variants'
 }
 
 export class UpdateVariant implements Action {
@@ -17,6 +18,13 @@ export class GetSpecialVariant implements Action {
   constructor(public payload: string) {}
 }
 
+
+//added to get variants
+export class GetVariant implements Action {
+  public readonly type = EVariantActions.GetVariant;
+}
+
+
 export class GetVariantSuccess implements Action {
   public readonly type = EVariantActions.GetVariantSuccess;
   constructor(public payload: Variant) {}
@@ -24,4 +32,4 @@ export class GetVariantSuccess implements Action {
 
 export type VariantActions =
 UpdateVariant |
-GetVariantSuccess;
+GetVariantSuccess | GetVariant;

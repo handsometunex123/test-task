@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-second-type',
@@ -8,6 +8,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class SecondTypeComponent implements OnInit {
 
+  @Input() price;
+  @Input() title;
+  
   constructor() { }
 
   public ngOnInit(): void {

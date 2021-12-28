@@ -1,2 +1,9 @@
-<app-first-type></app-first-type>
-<app-second-type></app-second-type>
+<ng-container *ngIf="(variant$ | async)?.variant as variance">
+  <app-first-type [title]='variance.title' [price]='variance.price'
+    *ngIf="variance.type === 'FirstType'; else second"
+  ></app-first-type>
+  <ng-template #second>
+    <app-second-type [title]='variance.title' [price]='variance.price'></app-second-type>
+  </ng-template>
+</ng-container>
+<app-countdown-timer></app-countdown-timer>

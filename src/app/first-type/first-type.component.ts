@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-first-type',
@@ -8,6 +8,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class FirstTypeComponent implements OnInit {
 
+  @Input() price;
+  @Input() title;
   constructor() { }
 
   public ngOnInit(): void {

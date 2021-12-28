@@ -1,0 +1,7 @@
+<h2 *ngIf="!offerEnd; else offerEnded">
+  Offer valid for {{ counter | formatTime }}
+</h2>
+
+<ng-template #offerEnded>
+  <h2>Offer has ended</h2>
+</ng-template>
